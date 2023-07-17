@@ -1,0 +1,137 @@
+body{
+    font-family: 'League Spartan', sans-serif;
+    display: grid;
+    grid-template-areas: "header section"
+                         "footer footer";
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 100vh;
+    align-items: center;
+    background: url(../images/bg-pattern-bottom-desktop.svg) no-repeat bottom right, url(../images/bg-pattern-top-desktop.svg) no-repeat top left;
+    padding: 60px clamp(0px, 11vw, 500px);
+}
+
+header{
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header h1{
+    color: hsl(300, 43%, 22%);
+    font-size: clamp(3.5rem, 3.8vw, 10rem);
+    width: 75%;
+}
+
+header p{
+    color: hsl(303, 10%, 53%);
+    font-size: clamp(1.57rem, 1.3vw, 4rem);
+    line-height: clamp(25px, 1.75vw, 50px);
+    font-weight: 500;
+    width: 80%;
+}
+
+section{
+    grid-area: section;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+section .rating-card{
+    display: flex;
+    gap: 25px;
+    background-color: hsl(300, 24%, 96%);
+    border-radius: 7px;
+    padding: 17px 80px 17px 30px;
+}
+
+section .rating-card:nth-child(1){
+    align-self: flex-start;
+}
+
+section .rating-card:nth-child(2){
+    align-self: center;
+    padding-right: 52px;
+}
+
+section .rating-card:nth-child(3){
+    align-self: flex-end;
+    padding-right: 77px;
+}
+
+section .rating-card .star-rating{
+    display: flex;
+    gap: 8px;
+}
+
+section .rating-card .star-rating img{
+    height: clamp(17px, 1vw, 30px);
+}
+
+section .rating-card p{
+    color: hsl(300, 43%, 22%);
+    font-size: clamp(1.5rem, 1.25vw, 4rem);
+    font-weight: 700;
+    white-space: nowrap;
+    margin-top: 2px;
+}
+
+footer{
+    grid-area: footer;
+    display: flex;
+    gap: 30px;
+}
+
+footer article{
+    background-color: hsl(300, 43%, 22%);
+    padding: 35px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+footer article:nth-child(1){
+    position: relative;
+    bottom: 40px;
+}
+
+footer article:nth-child(2){
+    position: relative;
+    bottom: 20px;
+}
+
+footer article q{
+    color: hsl(300, 24%, 96%);
+    font-size: clamp(1.4rem, 1.14vw, 3rem);
+    line-height: clamp(22px, 1.35vw, 40px);
+}
+
+footer article figure{
+    display: flex;
+    gap: 20px;
+}
+
+footer article figure img{
+    border-radius: 50%;
+    height: clamp(40px, 2.8vw, 80px);
+}
+
+footer article figure figcaption{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+footer article figure figcaption h2{
+    color: hsl(0, 0%, 100%);
+    font-size: clamp(1.5rem, 1.2vw, 3rem);
+}
+
+footer article figure figcaption p{
+    color: hsl(333, 80%, 67%);
+    font-size: clamp(1.5rem, 1.2vw, 3rem);
+}
